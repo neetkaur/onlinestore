@@ -1,0 +1,30 @@
+{
+  "name": "onlinestore",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neetkaur/onlinestore.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/neetkaur/onlinestore/issues"
+  },
+  "homepage": "https://github.com/neetkaur/onlinestore#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-react-views": "^0.11.0",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.13.0",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
+  }
+}
