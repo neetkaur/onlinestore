@@ -1,15 +1,20 @@
 const React = require('react');
+const DefaultLayout = require('./layouts/Default');
+
 class New extends React.Component{
   render(){
     return(
-      <div>
+      <DefaultLayout
+        styles={[{ key: 0, href: '/css/app.css' }, { key: 1, href: '/css/newpage.css' }]}
+        >
+      <div className = "heading">
       <h2>ADD A NEW CANDY</h2>
-      <form action = "/candystore" method="POST" id="candyform" className ="form">
+      <form action = "/candystore" method="POST" >
       <label>Name:</label>
       <input type="text" name="name"/><br/><br/>
 
       <label>Description:</label><br/>
-      <textarea name="description" form="candyform"></textarea><br/><br/>
+      <textarea name="description" ></textarea><br/><br/>
 
       <label>Image:</label>
       <input type="text" name="image"/><br/><br/>
@@ -24,7 +29,7 @@ class New extends React.Component{
 
       </form>
       </div>
-
+      </DefaultLayout>
     )
   }
 }

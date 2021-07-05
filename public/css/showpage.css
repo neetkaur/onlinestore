@@ -1,0 +1,56 @@
+h2 {
+  color: #49322a;
+  font-size: 2rem;
+  text-align: center;
+  font-family: fantasy;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+h3{
+  color: #49322a;
+  font-family: fantasy;
+  font-size: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+input[type="submit" i],button {
+  background-color: #80584a;
+  color: white;
+  border-color: #80584a;
+  border-width: thick;
+}
+
+.heading{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f1e5e1;
+  height: 600px;
+  width: 450px;
+  margin:auto;
+
+}
+
+.flexcont{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: space-around;
+  padding: 25px;
+  width: 300px;
+  padding-top: 0px;
+}
+
+.flexitem{
+flex: 1 0 21%;
+border: 1px solid brown;
+background-color: #f7ddb7;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
+align-content: space-around;
+font-family: fantasy;
+}

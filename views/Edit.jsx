@@ -1,17 +1,22 @@
 const React = require('react');
+const DefaultLayout = require('./layouts/Default');
+
 class Edit extends React.Component{
   render(){
     const CandyStoreJSX = this.props.CandyStoreJS
     return(
-      <div>
+      <DefaultLayout
+        styles={[{ key: 0, href: '/css/app.css' }, { key: 1, href: '/css/editpage.css' }]}
+        >
+      <div className = "heading">
       <h2>EDIT THE CANDY</h2>
-      <form method="POST" action = {`/candystore/${CandyStoreJSX._id}?_method=PUT`} id="candyform" className ="form">
+      <form method="POST" action = {`/candystore/${CandyStoreJSX._id}?_method=PUT`} >
 
       <label>Name:</label>
       <input type="text" name="name" defaultValue={CandyStoreJSX.name}/><br/><br/>
 
       <label>Description:</label><br/>
-      <textarea name="description" form="logsform" defaultValue={CandyStoreJSX.desciption}></textarea><br/><br/>
+      <textarea name="description" defaultValue={CandyStoreJSX.description}></textarea><br/><br/>
 
       <label>Image:</label>
       <input type="text" name="img" defaultValue={CandyStoreJSX.img}/><br/><br/>
@@ -27,6 +32,8 @@ class Edit extends React.Component{
 
       </form>
       </div>
+      </DefaultLayout>
+
 
     )
   }

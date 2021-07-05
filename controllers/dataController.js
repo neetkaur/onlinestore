@@ -59,7 +59,7 @@ const dataController = {
             msg: err.message
         })
       } else {
-        res.locals.data.candy=updatedcandy
+        res.locals.data.candy = updatedcandy
         next()
       }
     })
