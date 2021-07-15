@@ -15,8 +15,10 @@ class Index extends React.Component{
          <h2>SWEET DELIGHTS</h2>
          <img className = "rightimage" src="http://www.winecountrychocolates.com/wp-content/uploads/2014/07/Group.png" width="200" height="150"/>
         </div><br/>
-        &nbsp; &nbsp;  &nbsp; &nbsp;  <a href="/candystore"><img src={"/images/homeicon.png"} width="50" height="50"/></a> &nbsp; &nbsp;
-        <a href="/candystore/new"><img src={"/images/chocicon.png"} width="50" height="50"/></a>
+        &nbsp; &nbsp;  &nbsp; &nbsp;  <a href="/candystore"><img src={"/images/homeicon.png"} width="30" height="30"/></a> &nbsp; &nbsp;
+        <a href="/candystore/new"><img src={"/images/chocicon.png"} width="30" height="30"/></a> &nbsp; &nbsp;
+        <a href="/candystore/cart"><img src={"/images/shopping-cart-icon.png"} width="30" height="30"/></a>
+
         <div className = "flexcont">
         {
             CandyStoreJSX.map((eachcandy)=>{
@@ -26,7 +28,7 @@ class Index extends React.Component{
                   <a href={`/candystore/${eachcandy._id}`}>
                   <img src={eachcandy.img} alt={eachcandy.name} width="150" height="150"/>
                   </a>
-                  <h3>{'$ '+eachcandy.price}</h3>
+                  <h3>{'$ '+eachcandy.price} </h3>
                 </div>
               )
             })

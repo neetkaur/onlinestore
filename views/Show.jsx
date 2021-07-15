@@ -5,19 +5,24 @@ const DefaultLayout = require('./layouts/Default');
 class Show extends React.Component{
   render(){
     const selectedCandy = this.props.CandyStoreJS
+    //console.log(selectedCandy)
     let stockmessage = ""
-    if (selectedCandy.qty <=0 ){stockmessage = "OUT OF STOCK"}
-    else {stockmessage = "Stock Left: "+ selectedCandy.qty }
+    let buyornot = "yes"
+    if (selectedCandy.qty <=0 ){
+      stockmessage = "OUT OF STOCK"
+      buyornot = "no" }
+    else {
+      stockmessage = `Stock Left: ${selectedCandy.qty}`
+      buyornot = "yes"}
     return(
       <DefaultLayout
         styles={[{ key: 0, href: '/css/app.css' }, { key: 1, href: '/css/showpage.css' }]}
         >
+        <a href="/candystore"><img src={"/images/homeicon.png"} width="30" height="30"/></a> &nbsp; &nbsp;
+        <a href="/candystore/new"><img src={"/images/chocicon.png"} width="30" height="30"/></a> &nbsp; &nbsp;
+        <a href="/candystore/cart"><img src={"/images/shopping-cart-icon.png"} width="30" height="30"/></a>
 
-              <a href="/candystore"><img src={"/images/homeicon.png"} width="50" height="50"/></a> &nbsp; &nbsp;
-              <a href="/candystore/new"><img src={"/images/chocicon.png"} width="50" height="50"/></a>
-
-
-      <div className = "heading">
+        <div className = "heading">
         <h2>{selectedCandy.name}</h2>
         <img src={selectedCandy.img} alt={selectedCandy.name} width="200" height="200"/>
         <h3>{selectedCandy.description}</h3>
@@ -34,7 +39,7 @@ class Show extends React.Component{
         </form>
         {/*buy the candy*/}
         <form method="POST" action={`/candystore/buy/${selectedCandy._id}?_method=PUT`}>
-          <input type="submit" value="BUY"/>
+          <input className = {buyornot} type="submit" value="BUY"/>
         </form>
       </div>
       </div>

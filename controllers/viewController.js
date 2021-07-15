@@ -18,7 +18,9 @@ const viewController = {
   },
   new(req,res,next){
     res.render('New')
-
+  },
+  showcart(req, res, next){
+    res.render('Cart', { CandyStoreJS: res.locals.data.candy })
   }
 }
 

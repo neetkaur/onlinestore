@@ -54,3 +54,10 @@ align-items: center;
 align-content: space-around;
 font-family: fantasy;
 }
+
+.yes{
+  visibility: visible;
+}
+.no{
+  visibility: hidden;
+}

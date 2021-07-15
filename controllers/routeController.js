@@ -19,5 +19,7 @@ router.get('/:id/edit', dataController.show, viewController.edit)
 router.get('/:id', dataController.show, viewController.show)
 //buy_update
 router.put('/buy/:id', dataController.buy_update, viewController.show)
+//showcart
+router.get('/cart', dataController.showcart, viewController.showcart)
 
 module.exports = router

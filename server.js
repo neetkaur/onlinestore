@@ -6,6 +6,7 @@ const methodOverride = require('method-override');
 const mongoose = require('mongoose');
 const PORT = process.env.PORT || 3000
 const CandyStore = require('./models/candystore')
+const Cart =require('./models/cart')
 
 //set up mongoose
 const db = require('./models/db')

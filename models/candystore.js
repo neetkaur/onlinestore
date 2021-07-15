@@ -5,7 +5,7 @@ const candystoreSchema = new Schema({
   description: { type: String},
   img: { type: String},
   price: {type: Number, minimum: 0},
-  qty:{type: Number, minimum: 0},
+  qty:{type: Number, minimum: 0}
 })
 
 const CandyStore = model('CandyStore', candystoreSchema);

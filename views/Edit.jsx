@@ -8,6 +8,10 @@ class Edit extends React.Component{
       <DefaultLayout
         styles={[{ key: 0, href: '/css/app.css' }, { key: 1, href: '/css/editpage.css' }]}
         >
+        <a href="/candystore"><img src={"/images/homeicon.png"} width="30" height="30"/></a> &nbsp; &nbsp;
+        <a href="/candystore/new"><img src={"/images/chocicon.png"} width="30" height="30"/></a> &nbsp; &nbsp;
+        <a href="/candystore/cart"><img src={"/images/shopping-cart-icon.png"} width="30" height="30"/></a>
+
       <div className = "heading">
       <h2>EDIT THE CANDY</h2>
       <form method="POST" action = {`/candystore/${CandyStoreJSX._id}?_method=PUT`} >
